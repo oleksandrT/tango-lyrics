@@ -1,12 +1,13 @@
 html, body, ul {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 body {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 100%;
-	/*overflow: hidden;*/ /* I use it to remove scroll bar. Check why it apears */
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-size: 96%;
+	overflow-x: hidden;
 }
 
 ul {
@@ -15,6 +16,16 @@ ul {
 
 a {
 	text-decoration: none;
+}
+
+h1 {
+	color: #01AC75;
+	margin-bottom: 0;
+}
+
+h3 {
+	color: #999A9E;
+	margin-top: 0;
 }
 
 .header {
@@ -34,20 +45,22 @@ a {
 }
 
 .nav {
-	width: 250px;
+	width: 50%;
 	height: 100%;
 	z-index: 10000;
-	position: fixed;
+	/*position: fixed;*/
+	position: absolute;
 	top: 0;
-	left: -250px;
-	background-color: #555;
+	right: -54%;
+	background-color: #01AC75;
+	padding: 0 2%;
 	transition: left 0.1s ease-in 0.1s; /* <css property that is under effect> <duration> <easing> <delay = when transition will start> */
     -webkit-transition: left 0.1s ease-in 0.1s; /* Safari */
     -ms-transition: left 0.1s ease-in 0.1s;
 }
 
 .nav.open {
-	left: 0;
+	right: 0;
 }
 
 .close-nav {
@@ -56,25 +69,29 @@ a {
 	width: 60px;
 	height: 56px;
 	position: absolute;
-	right: 0;
+	left: 0;
+	top: 20px;
 	display: block;
+	/*border: 1px dashed pink;*/
 }
 
-.search > input {
-	width: 180px;
-	height: 30px;
-	margin-left: 10px;
+.search input {
+	width: 100%;
+	height: 7vw;
+	font-size: 1.4vw;
 }
 
 .nav-links {
-	padding-left: 12px;
-	line-height: 2.5;
+	line-height: 2.7;
+	margin-top: 27px;
 }
 
-.nav-links > a {
+.nav-links a {
 	display: block;
-	color: #eee;
-	font-style: italic;
+	color: #fff;
+	border-bottom: 1px solid #d0d0d0;
+	font-size: 2.4vw;
+	letter-spacing: 0.03em;
 }
 
 .open-nav {
@@ -85,37 +102,53 @@ a {
 	background-size: 38px auto;
 	margin-left: 10px;
 	display: block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
 
 .logo {
 	display: block;
-	width: 142px;
-	height: 56px;
-	margin: 0 auto;
 	text-transform: uppercase;
-	font-weight: bold;
+	color: #fff;
+	letter-spacing: 1.2;
+	font-family: Arial;
+	font-size: 120%	;
+	text-align: center;
+	border-bottom: 1px solid #d0d0d0;
+	margin: 0 0 15px;
+	padding: 32px 0 46px;
 }
 
 .main {
 	width: 100%;
-	margin-top: 56px;
 }
 
 .wrapper {
-	/*border: 1px solid red;*/
+	padding: 1px 2%; /* if put 0 instead 1px there is margin at the top */
+	position: relative;
+	color: #32323A;
+}
+
+.author {
+	font-size: 80%;
 }
 
 .original, .translation {
 	display: block;
+	vertical-align: top;	
 }
 
 .container {
 	display: table;
-	margin: 0 auto;
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
+/*@media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
+
+	.name {
+		padding: 0 2%;
+	}
 
 	.original, .translation {
 		display: inline-block;
@@ -124,30 +157,50 @@ a {
 
 }
 
-/* ----------- */
+
 @media only screen and (min-width : 768px) and (max-width : 1000px) {
 
+	.name {
+		padding: 0 2%;
+	}
+
 	.original, .translation {
 		display: inline-block;
 		width: 49%;
 	}
 
-}
+} */
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1001px) {
+@media only screen and (min-width : 700px) {
+
+	.name {
+		vertical-align: top;
+	}
 
 	.original, .translation {
 		display: inline-block;
 		width: 49%;
+		margin-top: 7%;
 	}
 
-	.logo {
-		padding-left: 250px;
+	.container p {
+		/*font-size: 120%;*/
+		font-size: 1.45vw;
+		line-height: 1.5;
 	}
 
 	.nav {
-		left: 0;
+		right: 0;
+		width: 21%;
+	}
+
+	.nav-links {
+		padding: 0;
+	}
+
+	.nav-links a {
+		font-size: 1.4vw;
 	}
 
 	.open-nav, .close-nav {
@@ -158,13 +211,13 @@ a {
 		text-align: center;
 	}
 
-	.search > input {
-		width: 230px;
-		margin-left: 0;
+	.search input {
+		width: 100%;
+		height: 3.6vw;
 	}
 
 	.wrapper {
-		margin-left: 250px;
+		margin-right: 25%;
 	}
 
 }
