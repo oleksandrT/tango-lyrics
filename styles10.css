@@ -79,6 +79,7 @@ h3 {
 	width: 100%;
 	height: 7vw;
 	font-size: 1.4vw;
+	color: #32323A;
 }
 
 .nav-links {
@@ -201,6 +202,10 @@ h3 {
 
 	.nav-links a {
 		font-size: 1.4vw;
+	}
+
+	.nav-links a:hover {
+		color: #41FFC3;
 	}
 
 	.open-nav, .close-nav {

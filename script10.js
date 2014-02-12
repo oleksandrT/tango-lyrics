@@ -3,7 +3,7 @@ $(document).ready( function() {
 	var list = $('.nav-links a')
 
 	// viewport sized text:
-	causeRepaintsOn = $("h1, p, a, span.author, imput");
+	causeRepaintsOn = $("h1, p, a, span.author, input");
 
 	$(window).resize(function() {
 		causeRepaintsOn.css("z-index", 1);
