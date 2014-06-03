@@ -1,0 +1,97 @@
+/*
+  TANGO LYRICS WEBSITE
+  Last update: 03 June 2014
+*/
+
+/* RESET */
+html, body, ul, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  outline: 0; 
+}
+
+html {height: 100%;}
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 100%;
+  position: relative;
+  height: 100%;
+  /*overflow: hidden;*/ /* I use it to remove scroll bar. Check why it apears */
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* FONTS */
+
+/* COMMON STYLES */
+.content {
+  padding: 10px 20px 20px;
+}
+
+.header {
+  position: relative;
+}
+
+.logo {
+  width: 92px;
+  margin: 0 auto;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 6%;
+  right: 0;
+  color: #279974;
+  border: 1px solid #279974;
+  padding: 5px;
+  line-height: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text {
+  padding-bottom: 20px;
+}
+
+.container p {
+  text-align: justify;
+}
+
+.nav {
+  position: fixed;
+  padding: 5%;
+  top: 0;
+  right: -60%;
+  width: 50%;
+  background-color: #279974;
+  height: 100%;
+  transition: right 500ms ease;
+}
+
+.open {
+  right: 0;
+}
+
+.close-icon {
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav input[type="search"] {
+  width: 100%;
+  margin: 20px 0;
+  height: 30px;
+}
+
+.nav-links a {
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+}
